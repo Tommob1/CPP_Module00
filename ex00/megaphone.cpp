@@ -6,7 +6,13 @@
 /*   By: btomlins <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/01 16:38:37 by btomlins          #+#    #+#             */
-/*   Updated: 2024/10/01 16:42:25 by btomlins         ###   ########.fr       */
+/*   Updated: 2024/10/01 16:47:15 by btomlins         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <iostream>
+
+int main(int argc, char **argv)
+{
+    return (0);
+}
