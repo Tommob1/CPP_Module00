@@ -6,7 +6,7 @@
 /*   By: btomlins <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/01 16:38:37 by btomlins          #+#    #+#             */
-/*   Updated: 2024/10/02 17:55:29 by btomlins         ###   ########.fr       */
+/*   Updated: 2024/10/02 17:57:07 by btomlins         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,8 @@ int main(int argc, char **argv)
     while (argc > 1 && argv && argv[++j])
     {
         i = -1;
+        while (j > 0 && argv[j][++i])
+                std::cout << (char)std::toupper(argv[j][i]);
     }
     std::cout << std::endl;
     return (0);
