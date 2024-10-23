@@ -6,7 +6,7 @@
 /*   By: btomlins <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/23 13:59:59 by btomlins          #+#    #+#             */
-/*   Updated: 2024/10/23 15:10:30 by btomlins         ###   ########.fr       */
+/*   Updated: 2024/10/23 15:31:32 by btomlins         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,6 +40,19 @@ int main()
 
             Contact newContact(first_name, last_name, nickname, phone_number, darkest_secret);
             phonebook.addContact(newContact);
+        }
+        else if (command == "SEARCH")
+        {
+            phonebook.searchContacts();
+        }
+        else if (command == "EXIT")
+        {
+            std::cout << "Exiting the program" << std::endl;
+            break;
+        }
+        else
+        {
+            std::cout << "Unknown command (enter ADD, SEARCH or EXIT)" << std::endl;
         }
     }
     return (0);
