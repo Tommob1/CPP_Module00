@@ -6,7 +6,7 @@
 /*   By: btomlins <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/23 13:00:00 by btomlins          #+#    #+#             */
-/*   Updated: 2024/10/23 13:56:57 by btomlins         ###   ########.fr       */
+/*   Updated: 2024/10/23 14:07:10 by btomlins         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,6 @@
 #define CONTACT_H
 #include <string>
 #include <iostream>
-#include <iomanip>
 #include <ctime>
 
 class Contact
