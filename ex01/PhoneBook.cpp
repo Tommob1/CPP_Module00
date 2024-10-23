@@ -6,7 +6,7 @@
 /*   By: btomlins <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/09 16:36:35 by btomlins          #+#    #+#             */
-/*   Updated: 2024/10/23 14:25:36 by btomlins         ###   ########.fr       */
+/*   Updated: 2024/10/23 14:26:41 by btomlins         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,14 +43,14 @@ void PhoneBook::searchContacts() const
               << std::setw(10) << "First Name" << "|"
               << std::setw(10) << "Last Name" << "|"
               << std::setw(10) << "Nickname" << std::endl;
-    std::cout << "---------------------------------------------"
+    std::cout << "---------------------------------------------" << std::endl;
 
     while (i < contactCount)
     {
         std::cout << std::setw(10) << i + 1 << "|"
-                << std::setw(10) << (contacts[i].getFirst_name().length() > 10 ? contacts[i].getFirst_name().substr(0, 9) + "." : contacts[i].getFirst_name()) << "|"
-                << std::setw(10) << (contacts[i].getLastName().length() > 10 ? contacts[i].getLastName().substr(0, 9) + "." : contacts[i].getLastName()) << "|"
-                << std::setw(10) << (contacts[i].getNick_name().length() > 10 ? contacts[i].getNick_name().substr(0, 9) + "." : contacts[i].getNick_name())
-                << std::endl;
+                 << std::setw(10) << (contacts[i].getFirst_name().length() > 10 ? contacts[i].getFirst_name().substr(0, 9) + "." : contacts[i].getFirst_name()) << "|"
+                 << std::setw(10) << (contacts[i].getLastName().length() > 10 ? contacts[i].getLastName().substr(0, 9) + "." : contacts[i].getLastName()) << "|"
+                 << std::setw(10) << (contacts[i].getNick_name().length() > 10 ? contacts[i].getNick_name().substr(0, 9) + "." : contacts[i].getNick_name())
+                 << std::endl;
     }
 }
