@@ -6,7 +6,7 @@
 /*   By: btomlins <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/23 13:00:00 by btomlins          #+#    #+#             */
-/*   Updated: 2024/10/23 13:16:54 by btomlins         ###   ########.fr       */
+/*   Updated: 2024/10/23 13:53:28 by btomlins         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,4 +39,5 @@ class Contact
 		std::string	getDarkest_secret() const;
 		time_t		getCreated() const;
 };
+
 #endif
