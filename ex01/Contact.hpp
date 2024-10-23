@@ -6,7 +6,7 @@
 /*   By: btomlins <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/23 13:00:00 by btomlins          #+#    #+#             */
-/*   Updated: 2024/10/23 13:11:24 by btomlins         ###   ########.fr       */
+/*   Updated: 2024/10/23 13:14:32 by btomlins         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,12 +18,12 @@
 class Contact
 {
 	private:
-		std::string _Last_name;
-		std::string _First_name;
-		std::string _Nick_name;
-		std::string _Phone_number;
-		std::string _Darkest_secret;
-		time_t 		_Created;
+		std::string fname;
+		std::string lname;
+		std::string nick;
+		std::string phnumber;
+		std::string secret;
+		time_t 		created;
 
 	public:
 		Contact();
