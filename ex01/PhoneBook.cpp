@@ -6,7 +6,7 @@
 /*   By: btomlins <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/09 16:36:35 by btomlins          #+#    #+#             */
-/*   Updated: 2024/10/23 14:26:41 by btomlins         ###   ########.fr       */
+/*   Updated: 2024/10/23 14:54:49 by btomlins         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,5 +52,38 @@ void PhoneBook::searchContacts() const
                  << std::setw(10) << (contacts[i].getLastName().length() > 10 ? contacts[i].getLastName().substr(0, 9) + "." : contacts[i].getLastName()) << "|"
                  << std::setw(10) << (contacts[i].getNick_name().length() > 10 ? contacts[i].getNick_name().substr(0, 9) + "." : contacts[i].getNick_name())
                  << std::endl;
+        i++;
     }
+
+    int index;
+    std::cout << "Enter an index to view full contact details: ";
+    std::cin >> index;
+
+    if (index >= 1 && index <= contactCount)
+    {
+        contacts[index - 1].displayContact();
+    }
+    else
+    {
+        std::cout << "Invalid index." << std::endl;
+    }
+}
+
+int PhoneBook::searchOldestContact() const
+{
+    int i;
+    int oldest;
+    
+    i = 1;
+    oldest = 0;
+    
+    while (i < contactCount)
+    {
+        if (contacts[i].getCreated() < contacts[oldest].getCreated())
+        {
+            oldest = i;
+        }
+        i++;
+    }
+    return oldest;
 }
