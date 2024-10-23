@@ -6,11 +6,11 @@
 #    By: btomlins <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/10/08 16:01:42 by btomlins          #+#    #+#              #
-#    Updated: 2024/10/23 08:21:34 by btomlins         ###   ########.fr        #
+#    Updated: 2024/10/23 14:00:39 by btomlins         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRCS = PhoneBook.cpp\
+SRCS = PhoneBook.cpp Contact.cpp main.cpp\
 
 OBJS = $(SRCS:.cpp=.o)
 NAME = phonebook
