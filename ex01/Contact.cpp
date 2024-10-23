@@ -6,7 +6,7 @@
 /*   By: btomlins <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/23 12:59:55 by btomlins          #+#    #+#             */
-/*   Updated: 2024/10/23 13:18:18 by btomlins         ###   ########.fr       */
+/*   Updated: 2024/10/23 15:34:36 by btomlins         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,3 +34,12 @@ std::string Contact::getNick_name() const { return nick; }
 std::string Contact::getPhone_number() const { return phnumber; }
 std::string Contact::getDarkest_secret() const { return secret; }
 time_t Contact::getCreated() const { return created; }
+
+void Contact::displayContact() const
+{
+  std::cout << "First Name: " << fname << std::endl;
+  std::cout << "Last Name: " << lname << std::endl;
+  std::cout << "Nickname: " << nick << std::endl;
+  std::cout << "Phone Number: " << phnumber << std::endl;
+  std::cout << "Darkest Secret: " << secret << std::endl;
+}
