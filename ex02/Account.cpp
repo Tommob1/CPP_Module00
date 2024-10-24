@@ -6,7 +6,7 @@
 /*   By: btomlins <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/23 15:51:08 by btomlins          #+#    #+#             */
-/*   Updated: 2024/10/24 14:05:22 by btomlins         ###   ########.fr       */
+/*   Updated: 2024/10/24 14:11:42 by btomlins         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,16 +19,24 @@ int Account::_totalAmount = 0;
 int Account::_totalNbDeposits = 0;
 int Account::_totalNbWithdrawals = 0;
 
-Account::Account(int initial_deposit) :_accountIndex(_nbAccounts), _amount(initial_deposit), _nbDeposits(0), _nbWithdrawals(0)
+Account::Account(int initial_deposit) 
+    : _accountIndex(_nbAccounts), _amount(initial_deposit), _nbDeposits(0), _nbWithdrawals(0) 
 {
     _nbAccounts++;
     _totalAmount += initial_deposit;
-    std::cout << "index:" << _accountIndex << ";amount:" << _amount << ";created" << std::endl;
+
+    _displayTimestamp();
+    std::cout << "index:" << _accountIndex 
+              << ";amount:" << _amount 
+              << ";created" << std::endl;
 }
 
-Account::~Account()
+Account::~Account() 
 {
-    std::cout << "Account closed. Index: " << _accountIndex << std::endl;
+    _displayTimestamp();
+    std::cout << "index:" << _accountIndex 
+              << ";amount:" << _amount 
+              << ";closed" << std::endl;
 }
 
 int Account::getNbAccounts()
