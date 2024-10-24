@@ -6,7 +6,7 @@
 /*   By: btomlins <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/23 15:51:08 by btomlins          #+#    #+#             */
-/*   Updated: 2024/10/24 12:35:05 by btomlins         ###   ########.fr       */
+/*   Updated: 2024/10/24 12:37:12 by btomlins         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,10 +77,10 @@ bool Account::makeWithdrawal(int withdrawal)
 
 void Account::displayStatus() const
 {
-
+    std::cout << "Account index: " << _accountIndex << ", Balance: " << _amount << ", Deposits: " << _nbDeposits << ", Withdrawals: " << _nbWithdrawals << std::endl;
 }
 
 void Account::displayAccountsInfos()
 {
-    
+    std::cout << "Total accounts: " << _nbAccounts << ", Total balance: " << _totalAmount << ", Total deposits: " << _totalNbDeposits << ", Total withdrawals: " << _totalNbWithdrawals << std::endl;
 }
