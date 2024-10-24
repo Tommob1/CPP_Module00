@@ -6,7 +6,7 @@
 /*   By: btomlins <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/23 15:51:08 by btomlins          #+#    #+#             */
-/*   Updated: 2024/10/24 12:28:48 by btomlins         ###   ########.fr       */
+/*   Updated: 2024/10/24 12:34:29 by btomlins         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,3 +48,39 @@ int Account::getNbWithdrawals()
     return _totalNbWithdrawals; 
 }
 
+void Account::makeDeposit(int deposit)
+{
+    _amount += deposit;
+    _nbDeposits++;
+    _totalAmount += deposit;
+    _totalNbDeposits++;
+    std::cout << "Deposit made. Amount: " << deposit << ", New Balance: " << _amount << std::endl;
+}
+
+bool Account::makeWithdrawal(int withdrawal)
+{
+    if (_amount >= withdrawal)
+    {
+        _amount -= withdrawal;
+        _nbWithdrawals++;
+        _totalAmount -= withdrawal;
+        _totalNbWithdrawals++;
+        std::cout << "Withdrawal made. Amount: " << withdrawal << ", New Balance: " << _amount << std::endl;
+        return true;
+    }
+    else
+    {
+        std::cout << "Withdrawal failed. Insufficient funds." << std::endl;
+        return false;
+    }
+}
+
+void Account::displayStatus() const
+{
+
+}
+
+void Account::displayAccountsInfos()
+{
+    
+}
