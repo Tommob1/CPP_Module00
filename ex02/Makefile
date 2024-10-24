@@ -6,12 +6,12 @@
 #    By: btomlins <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/10/23 15:43:47 by btomlins          #+#    #+#              #
-#    Updated: 2024/10/24 12:35:50 by btomlins         ###   ########.fr        #
+#    Updated: 2024/10/24 13:01:52 by btomlins         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 C++ = c++
-C++_FLAGS = -Wall - Wextra -Werror -std=c++98 -pedantic
+C++_FLAGS = -Wall -Wextra -Werror -std=c++98 -pedantic
 INFILES = tests.cpp Account.cpp\
 
 OBJFILES = $(INFILES:.cpp=.o)
