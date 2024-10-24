@@ -6,7 +6,7 @@
 /*   By: btomlins <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/23 15:51:08 by btomlins          #+#    #+#             */
-/*   Updated: 2024/10/24 12:21:28 by btomlins         ###   ########.fr       */
+/*   Updated: 2024/10/24 12:27:26 by btomlins         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,5 +29,22 @@ Account::Account(int initial_deposit) :_accountIndex(_nbAccounts), _amount(initi
 Account::~Account()
 {
     std::cout << "Account closed. Index: " << _accountIndex << std::endl;
+}
+
+int Account::getNbAccounts()
+{
+    return _nbAccounts; 
+}
+int Account::getTotalAmount()
+{
+    return _totalAmount; 
+}
+int Account::getNbDeposits()
+{
+    return _totalNbDeposits; 
+}
+int Account::getNbWithdrawals()
+{
+    return _totalNbWithdrawals; 
 }
 
